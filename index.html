@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Rabya Sarfraz</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bubbles"></div>
+
+    <div class="header">
+        <div class="close-btn" onclick="closeSite()">×</div>
+        <div class="nav-links">
+            <a href="./About.html" alt="About">About</a>
+            <a href="./Contact.html" alt="Contact">Contact</a>
+            <a href="./skills.html" alt="Skills">Skills</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Welcome</h1>
+        <img src="./Rabya.jpeg" alt="Profile Picture" class="passport">
+        <h2>I'M Rabya Sarfraz</h2>
+        <h3>As an academic writer with three years of experience,
+            I specialize in crafting well-researched and structured content in nontechnical disciplines.
+            My writing is clear, concise, and adheres to academic standards,
+            providing insightful analysis across a range of topics. With a focus on originality and precision,
+            I ensure that my work meets the needs of students, researchers, and professionals alike.</h3>
+        <hr>
+        <div class="button-container">
+            <a href="./RABYA SARFRAZ RESUME (1).pdf" class="button download-cv" alt="CV">Download My CV</a>
+            <div style="margin: 20px 0;"></div> <!-- Added line gap -->
+            <div class="button work-btn" onclick="toggleWork()">View My Work</div>
+            
+            <div id="work-section" class="work-section">
+                <div class="sub-buttons" id="assignments-section">
+                    <div class="button" onclick="toggleDocuments('assignments')">Assignments</div>
+                    <div class="doc-section" id="assignments-docs">
+                        <button class="button"><a href="./Accounting- Harbour Plc.docx" target="_blank">Accounting- Harbour</a></button>
+                        <button class="button"><a href="./Project Planning & Implementation.docx" target="_blank">Project Planning & Implementation</a></button>
+                        <button class="button"><a href="./IHRM Work.docx" target="_blank">IHRM Work</a></button>
+                        <button class="button"><a href="./Accounting- Smith Group Plc.docx" target="_blank">Accounting- Smith Group</a></button>
+                        <button class="button"><a href="./Biotechnology.docx" target="_blank">Biotechnology</a></button>
+                        <button class="button"><a href="./Tesla Air.docx" target="_blank">Tesla Air</a></button>
+                    </div>
+                </div>
+                <div class="sub-buttons" id="research-section">
+                    <div class="button" onclick="toggleDocuments('research')">Research Papers</div>
+                    <div class="doc-section" id="research-docs">
+                        <button class="button"><a href="./Research Paper- Iran in civil nuclear program.docx" target="_blank">Iran in civil nuclear program</a></button>
+                        <button class="button"><a href="./Research Paper-Telemedicine in Healthcare.docx" target="_blank">Research Paper-Telemedicine in Healthcare</a></button>
+                        <button class="button"><a href="./Research Project-Ideation to design.docx" target="_blank">Research Project-Ideation to design</a></button>
+                        <button class="button"><a href="./Paper on Alahli Bank.docx" target="_blank">Paper on Alahli Bank</a></button>
+                    </div>
+                </div>
+                <div class="sub-buttons" id="project-proposals-section">
+                    <div class="button" onclick="toggleDocuments('project-proposals')">Project Proposals</div>
+                    <div class="doc-section" id="project-proposals-docs">
+                        <button class="button"><a href="./Research Proposal-Management.docx" target="_blank">Research Proposal-Management</a></button>
+                        <button class="button"><a href="./Project Proposal.docx" target="_blank">Project Proposal</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Rabya Sarfraz. All rights reserved.
+    </div>
+
+    <script>
+        function closeSite() {
+            alert("Cannot close the site directly.");
+        }
+
+        // Toggle Work Section
+        function toggleWork() {
+            var workSection = document.getElementById("work-section");
+            workSection.style.display = (workSection.style.display === "block") ? "none" : "block";
+        }
+
+        // Toggle Documents
+        function toggleDocuments(section) {
+            var docs = document.getElementById(section + '-docs');
+            docs.style.display = (docs.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
